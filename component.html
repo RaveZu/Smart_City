@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Waste</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Nunito', sans-serif;
+        box-sizing: border-box;
+    }
+
+    .container {
+        position: relative;
+        padding: 0 100px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 100px;
+        background-color: #000;
+        z-index: 1000;
+    }
+
+    .container header .logo {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 1.5em;
+        text-decoration: none;
+    }
+
+    .container header ul {
+        display: flex;
+        list-style: none;
+    }
+
+    .container header ul li {
+        margin: 0 20px;
+    }
+
+    .container header ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        padding: 4px 10px;
+        transition: all 0.3s ease;
+    }
+
+    .container header ul li a:hover {
+        background: #2692f8;
+        color: #111;
+        border-radius: 5px;
+    }
+
+    .menuIcon {
+        display: none;
+    }
+.flex-container{
+    margin-top: 130.3px;
+    padding-left: 60px;
+    padding-top: 100px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 50px;
+    justify-content: space-around;
+}
+.flex-box{
+    width: 350px;
+    height: 400px;
+    background: black;
+    color: white;
+    text-align: left;
+    border-radius: 20px;
+    margin: 10px;
+}
+.flex-box, p{
+    padding-left: 20px;
+    font-size: 18px;
+    padding-top: 10px;
+}
+.flex-box, h1{
+    transition: 1s;
+    padding-left: 20px;
+    font-size: 25px;
+    line-height: 25px;
+}
+.flex-box:hover{
+    transition: 1s;
+    transform: scale(1.1);
+}
+.background{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+.flex-container {
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  
+}
+img{
+    margin-top: 50px;
+    margin-left: 60px;
+}
+
+
+</style>
+</head>
+<body>
+    <div class="background">
+        <video src="Images/video (2160p) (1).mp4" autoplay muted loop></video>
+    </div>
+    <div class="container">
+        <header id="navbar">
+            <a href="#" class="logo">Smart City</a>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="smartcity.html" class="active">Problems</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="component.html">Components</a></li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+            <span class="menuIcon" onclick="toggleMenu();"></span>
+        </header>
+
+    <div class="flex-container">
+        <div class="flex-box">
+             <p>Smart Waste</p>
+             <h1>Reduce Waste.</h1>
+             <h1>Reuse Materials.</h1>
+             <h1>Recycle Garbage.</h1>
+             <a href="home.html"><img src="https://freerangestock.com/sample/120165/recycle-symbol-vector.jpg" alt="Smart Waste" style="width: 180px; height: 180px; display: flex ; justify-content: center; border-radius: 50%; border: 10px solid white;"></a>
+        </div>
+        <div class="flex-box">
+            <p>Smart Transportation</p>
+            <h1>Modern Mobility.</h1>
+            <h1>Cloud Computing.</h1>
+            <h1>Wireless Communication.</h1>
+            <a href="home.html"><img src="https://static.vecteezy.com/system/resources/previews/017/120/789/original/car-icon-isolated-simple-view-front-logo-illustration-sign-symbol-auto-style-car-logo-design-with-concept-sports-vehicle-icon-silhouette-vector.jpg" alt="Smart Transportation" style="width: 180px; height: 180px; display: flex ; justify-content: center; border-radius: 50%; border: 10px solid white;"></a>
+        </div>
+        <div class="flex-box">
+            <p>Smart Energy</p>
+            <h1>Artificial Intelligence.</h1>
+            <h1>Machine Learning.</h1>
+            <h1>Data Analysis.</h1>
+            <a href="home.html"><img src="https://static.vecteezy.com/system/resources/previews/000/533/438/non_2x/lightning-bolt-icon-vector.jpg" alt="Smart Energy"style="width: 180px; height: 180px; display: flex ; justify-content: center; border-radius: 50%; border: 10px solid white;"></a>
+        </div>
+        <div class="flex-box">
+            <p>Smart Infrastructure</p>
+            <h1>City Leaders.</h1>
+            <h1>Urban Planners.</h1>
+            <h1>Department Engineers.</h1>
+            <a href="home.html"><img src="https://static.vecteezy.com/system/resources/previews/004/433/864/original/house-building-icon-home-symbol-for-location-plan-free-vector.jpg" alt="Smart Infrastructure"style="width: 180px; height: 180px; display: flex ; justify-content: center; border-radius: 50%; border: 10px solid white;"></a>
+       </div>
+       <div class="flex-box">
+           <p>Smart Governance</p>
+           <h1>Smart People.</h1>
+           <h1>Smart Techonology.</h1>
+           <h1>Smart Government.</h1>
+           <a href="home.html"><img src="https://static.vecteezy.com/system/resources/previews/006/697/995/non_2x/flag-icon-template-black-color-editable-flag-icon-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg" alt="Smart Governance"style="width: 180px; height: 180px; display: flex ; justify-content: center; border-radius: 50%; border: 10px solid white;"></a>
+       </div>
+       <div class="flex-box">
+           <p>Smart Healthcare</p>
+           <h1>Medical Care.</h1>
+           <h1>Advanced Staff.</h1>
+           <h1>Life.</h1>
+           <a href="home.html"><img src="https://media.istockphoto.com/id/1004243378/vector/caduceus-health-symbol-asclepiuss-wand-icon-black-color-illustration-flat-style-simple-image.jpg?s=612x612&w=0&k=20&c=Mymt2MH3jtAIhYXUBfbm75l0bJfQdYTd6FBeaWa4vXU=" alt="Smart Governance"style="width: 180px; height: 180px; display: flex ; justify-content: center; border-radius: 50%; border: 10px solid white;"></a>
+       </div>
+    </div>
+
+</body>
+</html>

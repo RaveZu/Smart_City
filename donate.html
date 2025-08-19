@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+    
+    *{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }     
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://d1y8sb8igg2f8e.cloudfront.net/images/shutterstock_1108498157.2e16d0ba.fill-1600x775.jpg);
+}
+.login_container { 
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    background-size:cover;
+} 
+.login_container2{
+    background:transparent;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 10%;
+    width: 500px;
+    height: fit-content;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+.login_container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 50px;
+    color:wheat;
+}
+.login_container label {
+    text-align: center;
+    margin-bottom: 5px; 
+    font-weight: bold;
+    font-size:18px;
+    color:white ;
+}
+.login_container input{
+    width: 80%;
+    height: 40px; 
+    border-radius: 10px;
+    padding-left: 15px;
+}
+.login_container .button{
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color:white;
+    background-color: black;
+}
+.login_container .button:hover{
+    background-color: greenyellow;
+    transition: 1s;
+    cursor: pointer;
+   
+}
+.login_container .button:active{
+    transform: scale(0.7);
+    
+}
+.container{
+    position: relative;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px; 
+    background-color: #000; 
+}
+.container header .logo{  
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+ 
+.container header ul{
+    position: relative;
+    display: flex;
+}
+.container ul li{
+    list-style: none;
+    margin: 0 20px;
+    text-decoration: none;
+}
+.container ul li a{
+    position:relative;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 4px 10px;
+    color: #fff; 
+
+}
+.container header ul li  a:hover,
+.container header ul li a:active
+{
+    background: #2692f8;
+    color: #ffffff;
+}
+.container .content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container .content .bannerText{
+    position: relative;
+    max-width: 700px;
+}
+.container .content .bannerText div{
+    transition: 0.5s ease-in-out;
+    display: none;
+}
+.container .content .bannerText div.active{
+    display: initial;
+} 
+.container .content .bannerText div h2{
+    color: #fff;
+    font-size: 17px;
+     line-height: 1em; 
+    font-weight: 700;
+}
+.container .content .bannerText p{
+    color: #fff;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.controls {
+    position: absolute;
+    bottom:50px ;
+    right: 50px; 
+    display: flex;
+}
+.controls li{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    cursor: pointer; 
+}
+.controls li:hover{
+    background:rgb(33, 100, 244);
+}
+.menuIcon
+{
+    display: none;
+}
+@media (max-width: 991px)
+{
+    .container 
+    {
+        padding: 20px;
+    }
+    .container::before
+    {
+        width: 100%;
+    }
+    .container header
+    {
+        padding: 10px 20px;
+    }
+    .container .content .bannerText div h2
+    {
+        font-size: 3em;
+    }
+    .container .content .bannerText
+    {
+        text-align: center;
+    }
+    .container header ul
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40vh;
+        background: #fff;
+        z-index: 1000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container header.active ul
+    {
+        display: flex;
+    }
+    .container header ul li 
+    {
+        text-align: center;
+        margin: 10px;
+    }
+    .container header ul li a
+    {
+        color: #333;
+        font-size: 1.5em;
+    }
+    .container header ul li a:hover
+    {
+        color: #f00;
+        cursor: pointer;
+    }
+    .menuIcon
+    {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        display: initial;
+        z-index: 10000;
+        background: #fff url(Images/menu.png);
+        background-size:30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .menuIcon.active 
+    {
+        background: #fff url(Images/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;    
+    }
+    .sci li a
+    {
+        width: 50px;
+        height: 50px;
+    }
+    .controls li 
+    {
+        width: 60px;
+        height: 60px;
+    }
+
+}
+.footer
+{
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+    height: 100%;
+    background: #111;
+}
+.footer h4
+{
+    color: #fff;
+}
+.footer p
+{
+    color: #fff;
+}
+.footer h4
+{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+</style>
+  </head>
+<body>
+    <div class="container">
+        <header id="navbar">
+            <a href="#" class="logo">Smart City
+            </a>
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="smartcity.html" class="active">Problems</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="component.html">Components</a></li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+            <span class="menuIcon" onclick="toggleMenu();"></span>
+        </header>
+        </div>
+
+    <div class="login_container">
+        <div class="login_container2">
+            <form name="loginform"><br>
+                <h2 class="logintxt">Donate</h2>
+                <input type="text" name="username" placeholder="Enter your full name" required><br><br>
+    
+    
+                <input type="text" name="email" placeholder="Enter your email" required><br><br>
+    
+                <input type="number" name="money" placeholder="Enter the amount you want to donate($)" required><br><br><br>
+                <button class="button" onclick="Show();">Donate</button><br><br>
+            </form>
+        </div><br><br><br><br><br><br><br><br><br>
+        
+        
+    </div>
+    <section class="footer">
+        <a name="aboutus" class="aboutus"></a>
+            <h4>About Us</h4>
+        </section>
+    </section>    
+</body>
+</html>

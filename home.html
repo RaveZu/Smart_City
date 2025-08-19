@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart City</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            padding: 0 100px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 100px;
+            background-color: #000;
+            z-index: 1000;
+        }
+
+        .container header .logo {
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        .container header ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .container header ul li {
+            margin: 0 20px;
+        }
+
+        .container header ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 4px 10px;
+            transition: all 0.3s ease;
+        }
+
+        .container header ul li a:hover {
+            background: #2692f8;
+            color: #111;
+            border-radius: 5px;
+        }
+
+        .menuIcon {
+            display: none;
+        }
+
+        @media (max-width: 991px) {
+            .container {
+                padding: 20px;
+            }
+
+            .container header {
+                padding: 10px 20px;
+            }
+
+            .container header ul {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: #fff;
+                z-index: 1000;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .container header.active ul {
+                display: flex;
+            }
+
+            .container header ul li {
+                text-align: center;
+                margin: 10px;
+            }
+
+            .container header ul li a {
+                color: #333;
+                font-size: 1.5em;
+            }
+
+            .container header ul li a:hover {
+                color: #f00;
+                cursor: pointer;
+                background: transparent;
+            }
+
+            .menuIcon {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 50px;
+                height: 50px;
+                display: initial;
+                z-index: 10000;
+                background: #fff url(Images/menu.png);
+                background-size: 30px;
+                background-repeat: no-repeat;
+                background-position: center;
+                cursor: pointer;
+            }
+
+            .menuIcon.active {
+                background: #fff url(Images/close.png);
+                background-size: 25px;
+                background-repeat: no-repeat;
+                background-position: center;
+                cursor: pointer;
+            }
+        }
+        .footer h4
+        {
+            margin-bottom: 25px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+         .footer
+        {
+            padding-bottom: 17%;
+            padding-top: 10px;
+            text-align: center;
+            align-items: center;
+            height: 200px;
+            background: #111;
+        }
+        .footer h4
+        {
+            text-align: center;
+            color: #fff;
+        }
+        .footer p
+        {
+            text-align: center;
+            color: #fff;
+        }
+
+        .container-smartcity1 {
+            margin-top: -8%;
+            text-align: center;
+            background-image: url(Images/pexels---747079.jpg);
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            padding: 30px;
+        }
+
+        .container-smartcity1 h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            margin-bottom: 40px;
+            color: rgb(2, 1, 1);
+        }
+
+        .container-smartcity1 p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 28px;
+            line-height: 1.6;
+            transition: 1s;
+        }
+
+        .container-smartcity1:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: 1s;
+            border: 5px;
+        }
+
+        .container-smartcity2 {
+            background-color: #ccc;
+            height: 500px;
+            background-position: center;
+            background-image: url(Images/pexels-nick-kwan-2725479.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 50px;
+        }
+
+        .container-smartcity2 h2 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 50px;
+            margin-bottom: 60px;
+        }
+
+        .mission-list li {
+            font-size: 25px;
+            margin-bottom: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            transition: 1s;
+        }
+
+        .mission-list li:hover {
+            transform: scale(1.05) ;
+            cursor: pointer;
+            transition: 1s;
+
+        }
+
+        .container-smartcity3 {
+            background-color: #ccc;
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+            background-image: url(Images/pexels-pixabay-417023.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .component-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .component {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 40px;
+            border-radius: 5px;
+            padding: 20px;
+            box-sizing: border-box;
+            vertical-align: top;
+            transition: all 0.3s ease;
+            image-orientation: flip;
+        }
+
+        .component:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transform: scale(1.2);
+            color: gold;
+
+        }
+        .component img {
+            width: 100%;
+            height: auto;
+        }
+
+        .component p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+    .smart{
+            transition: 1s;
+            letter-spacing: 25px;
+        }
+    .smart:hover{
+        letter-spacing: 50px;
+        cursor: pointer;
+        color: aqua;
+        transform: scale(1.1);
+        transition: 0.5s;
+}
+.introduce{
+    animation-duration: 0.75s;
+    animation-name: animate-fade;
+    animation-delay: 0.25s;
+    animation-fill-mode: backwards;
+  }
+
+  @keyframes animate-fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header id="navbar">
+            <a href="#" class="logo">Smart City</a>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="smartcity.html" class="active">Problems</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="component.html">Components</a></li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+            <span class="menuIcon" onclick="toggleMenu();"></span>
+        </header>
+
+        <main class="container-fluid" style="background-color: #ccc;">
+            <div style="position: absolute; margin-top: 20%; font-size: 70px; color: rgb(5, 6, 6); text-align: center; width: 89%; height: auto; padding-bottom: 30px;"><h style="color:white;" class="introduce">Introducing</h><br><div class="smart"><h style= "font-size: 250px; color: rgb(129, 2, 2); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">SMART</h></div><h style="color: white;" class="City">City</h></div>
+            <img src="Images/pexels-taryn-elliott-3889865.jpg" style="margin-left: -105px; width: 116%; height: 950px; opacity: 5; padding-bottom: 100px;"><br>
+            <!-- What is a Smart City? section -->
+            <section class="container-smartcity1" style="margin-left: -105px; width: 116%; height: 950px; padding-bottom: 100px;">
+                <div class="section">
+                    <h2 style="color: rgb(255, 255, 255);font-size: 60px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">What Is A Smart City?</h2><br><br>
+                    <p style="color: white; border: rgb(5, 5, 171) solid 3px; border-radius: 5px; background-color:rgb(82, 82, 245); font-size: 35px;">Welcome to the future of living: smart cities! Imagine a place where technology works for you, making daily life easier and more efficient. In smart cities, sensors and data are used to tackle challenges and enhance services. From intelligent traffic management to apps that streamline parking, these cities are designed to optimize your experience. Sustainability is key, with a focus on renewable energy and reducing waste to protect the environment. Join us in exploring how smart cities are transforming urban living, making it greener, more connected, and ultimately, more enjoyable for all.</p>
+                </div>
+            </section>
+
+            <!-- Missions of a Smart City section -->
+            <section class="container-smartcity2" style="margin-left: -105px; width: 116%; height: 950px; padding-bottom: 100px;">
+                <div class="section">
+                    <h2 style="color: rgb(255, 255, 255); font-size: 60px;">Smart City Missions</h2><br><br>
+                    <ul class="mission-list" >
+                        <li style="color: white; border: rgb(171, 5, 5) solid 2px; border-radius: 5px; background-color:rgb(245, 93, 82);">Support communities with innovative technologies.</li><br>
+                        <li style="color: white; border:  rgb(171, 5, 5) solid 2px; border-radius: 5px; background-color:rgb(245, 93, 82);">Improve transportation systems for better connectivity.</li><br>
+                        <li style="color: white; border: rgb(171, 5, 5) solid 2px; border-radius: 5px; background-color:rgb(245, 93, 82);">Enhance public safety through advanced surveillance systems.</li><br>
+                        <li style="color: white; border: rgb(171, 5, 5) solid 2px; border-radius: 5px; background-color:rgb(245, 93, 82);">Promote environmental sustainability with eco-friendly initiatives.</li><br>
+                        <li style="color: white; border: rgb(171, 5, 5) solid 2px; border-radius: 5px; background-color:rgb(245, 93, 82);">Foster economic development by attracting businesses.</li><br>
+                        <li style="color: white; border: rgb(171, 5, 5) solid 2px; border-radius: 5px; background-color:rgb(245, 93, 82);">Ensure inclusive growth for all citizens, bridging digital divides.</li><br>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Components of a Smart City section -->
+            <section class="container-smartcity3" style="margin-left: -105px; width: 116%; height: 950px; padding-bottom: 100px;">
+                <div class="section">
+                    <h2 style="padding-bottom: 10%; font-size: 50px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: rgb(0, 0, 0); font-size: 60px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Components Of A Smart City</h2><br><br>
+                    <div class="component-list">
+                        <div class="component">
+                            <a href="component.html"><img src="https://freerangestock.com/sample/120165/recycle-symbol-vector.jpg" alt="Smart Waste"></a>
+                            <p style="font-weight: bold; font-size: 25px;">Smart Waste</p>
+                        </div>
+                        <div class="component">
+                            <a href="component.html"><img src="https://static.vecteezy.com/system/resources/previews/017/120/789/original/car-icon-isolated-simple-view-front-logo-illustration-sign-symbol-auto-style-car-logo-design-with-concept-sports-vehicle-icon-silhouette-vector.jpg" alt="Smart Transportation"></a> 
+                            <p style="font-weight: bold; font-size: 25px;">Smart Transportation</p>
+                        </div>
+                        <div class="component">
+                            <a href="component.html"><img src="https://static.vecteezy.com/system/resources/previews/000/533/438/non_2x/lightning-bolt-icon-vector.jpg" alt="Smart Energy"></a> 
+                            <p style="font-weight: bold; font-size: 25px;">Smart Energy</p>
+                        </div>
+                        <div class="component">
+                            <a href="component.html"><img src="https://static.vecteezy.com/system/resources/previews/004/433/864/original/house-building-icon-home-symbol-for-location-plan-free-vector.jpg" alt="Smart Infrastructure"></a> 
+                            <p style="font-weight: bold; font-size: 25px;">Smart Infrastructure</p>
+                        </div>
+                        <div class="component">
+                            <a href="component.html"><img src="https://static.vecteezy.com/system/resources/previews/006/697/995/non_2x/flag-icon-template-black-color-editable-flag-icon-symbol-flat-illustration-for-graphic-and-web-design-free-vector.jpg" alt="Smart Governance"></a> 
+                            <p style="font-weight: bold; font-size: 25px;">Smart Governance</p>
+                        </div>
+                        <div class="component">
+                            <a href="component.html"><img src="https://media.istockphoto.com/id/1004243378/vector/caduceus-health-symbol-asclepiuss-wand-icon-black-color-illustration-flat-style-simple-image.jpg?s=612x612&w=0&k=20&c=Mymt2MH3jtAIhYXUBfbm75l0bJfQdYTd6FBeaWa4vXU=" alt="Smart Healthcare"></a> 
+                            <p style="font-weight: bold; font-size: 25px;">Smart Healthcare</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <section class="footer">
+            <a name="aboutus" class="aboutus"></a>
+                <h4>About Us</h4>
+            </section>
+        </section>    
+</body>
+</html>

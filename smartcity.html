@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="icon/png" href="favicon.png">
+    <title>Pollution Awareness</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+<section class="first">
+
+                                <!--LANDING PAGE-->
+
+<!--Resources-->
+    <div class="bannerVideo" id="slideShow">
+        <video src="Images/production_id_3850868 (1080p).mp4"autoplay muted loop class="active"></video>
+        <video src="Images/production_id_4319342 (1080p).mp4" autoplay muted loop ></video>
+        <video src="Images/pexels-olya-kobruseva-5236593 (1080p) (1).mp4" autoplay muted loop></video>
+        <!--<video src="video4.mp4" autoplay muted loop></video>-->
+    </div>
+
+<!-- Navbar -->
+    <div class="container" >
+        <header id="navbar" style="z-index: 10;">
+            <a href="#" class="logo">Smart City
+            </a>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="smartcity.html" class="active">Problems</a></li>
+                <!--<li><a href="#">Newsroom</a></li>
+                <li><a href="#" >Events</a></li>-->
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="component.html">Components</a></li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+            <span class="menuIcon" onclick="toggleMenu();"></span>
+        </header>
+
+<!--Video Intro-->
+        <div class="content">
+            <div class="bannerText" id="slideShowText">
+                <div class="active">
+                    <h2>Pollution.</h2>
+                    <p>Pollution is a contamination of our environment - with harmful chemicals, toxins and litter . 
+                        This effects health, wildlife, and to a further extent - our cities.</p>
+                    <a href="#air" class="learnmore">Learn More</a>
+                </div>
+                <div>
+                    <h2>Kleptocracy.</h2>
+                    <p>Kleptocracy is a corrupt form of governance - mostly leaning in for the leading party's benefits instead of the community.
+                        This effects progress, stability, and to a further extent - our cities.</p>
+                    <a href="#water" class="learnmore">Learn More</a>
+                </div>
+                <div>
+                    <h2>Bad Infrastructure.</h2>
+                    <p>Bad Infrastructure is an infant stage of facilities and technology - making up a lesser and weakly built society.
+                        This effects safety, advancement, and to a further extent - our cities.</p>
+                    <a href="#land" class="learnmore">Learn More</a>
+                </div>
+
+                <!--<div>
+                    <h2>Sound</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>-->
+            </div>
+        </div>    
+
+
+
+<!--Sticky Socials-->
+        <!--<ul class="sci">
+            <li><a href="#"><img src="facebook1.png"></a></li>
+            <li><a href="#"><img src="insta.png"></a></li>
+            <li><a href="#"><img src="twitter1.png"></a></li>
+        </ul>-->
+
+<!--Arrows-->
+        <ul class="controls">
+            <li onclick="prevSlide();prevSlideText();"><img src="https://cdn-icons-png.freepik.com/512/44/44897.png" width="60px" height="60px"></li>
+            <li onclick="nextSlide();nextSlideText();"><img src="https://cdn-icons-png.flaticon.com/512/44/44567.png" width="60px" height="60px"></li>
+        </ul>
+    </div>
+</section>
+
+<!--Arrow Controls-->
+<script type="text/javascript">
+    const slideShow = document.getElementById('slideShow');
+    const slides = slideShow.getElementsByTagName('video');
+    var index = 0;
+    function nextSlide(){
+        slides[index].classList.remove('active');
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active');
+    }
+    function prevSlide(){
+        slides[index].classList.remove('active');
+        index = (index - 1 + slides.length) % slides.length;
+        slides[index].classList.add('active');
+    }
+
+
+    const slideShowText = document.getElementById('slideShowText');
+    const slidesText = slideShowText.getElementsByTagName('div');
+    var i = 0;
+    function nextSlideText(){
+        slidesText[i].classList.remove('active');
+        i = (i + 1) % slidesText.length;
+        slidesText[i].classList.add('active');
+    }
+    function prevSlideText(){
+        slidesText[i].classList.remove('active');
+        i = (i - 1 + slidesText.length) % slidesText.length;
+        slidesText[i].classList.add('active');
+    }
+    function toggleMenu(){
+        const menuIcon = document.querySelector('.menuIcon');
+        const navbar = document.getElementById('navbar');
+        menuIcon.classList.toggle('active');
+        navbar.classList.toggle('active');
+    }
+</script>
+
+                                <!--Pollution PAGE-->
+<a name = "air" class="air"><section class="second"></a>
+
+    <div class="air">
+       <div class="airborder"><h1 class="teleportpointa" style="color: rgb(0, 0, 0);">Pollution</h1></div><br><br><br>
+
+
+        <div class="totalair">
+            <div class="prosair">
+                <h3 style="font-size: 40px; font-family:monospace; color: rgb(77, 5, 5);">Causes</h3>
+                <p >Pollution can be caused by various factors:<br>
+                    -Car and truck exhaust<br>
+                    -Factories<br>
+                    -Dust<br>
+                    -Pollen<br>
+                    -Mold spores<br>
+                    -Volcanoes<br>
+                    -Wildfires<br>
+                    -Burning fossil fuels, such as coal and petroleum<br>
+                    -Burning wood<br>
+                    -Chemical reactions in the air
+
+                </p>
+            </div>
+
+            <div class="prosair">
+                <h3 style="font-size: 40px; font-family:monospace; color: rgb(77, 5, 5);">Preventions</h3>
+                <p>To prevent pollution, we can implement several measures:<br>
+                    -Driving your car less<br>
+                    -Keeping your car in good repair<br>
+                    -Turning off your engine<br>
+                    -Not burning your garbage<br>
+                    -Limiting backyards fire in the city<br>
+                    -Planting and caring for trees<br>
+                    -Reducing or eliminating fireplace and wood stove use<br>
+                    -Avoiding using gas-powered lawn and garden equipment <br>
+                  </p>
+            </div>
+
+
+            <div class="prosair">
+                <h3 style="font-size: 40px; font-family:monospace; color: rgb(77, 5, 5);">Facts</h3>
+                <p>Here are some facts about pollution:<br>
+                -Pollution is a global killer: Pollution affects over 100 million people, which is comparable to global diseases like malaria and HIV.<br>
+                -Pollution can shorten life expectancy: From 1998-2021, particulate pollution cut global life expectancy short by 6.1 months.<br>
+                -Pollution can increase the risk of cancer: People who live in places with high levels of air pollutants have a 20% higher risk of death from lung cancer.</p>
+
+            
+        </div>
+    </div>
+</section>
+
+                                <!--Kleptocracy PAGE-->
+<a name = "water" class="water"><section class="third"></a>
+        <div class="water">
+                <h1 style="color:rgb(0, 0, 0);">Kleptocracy</h1><br><br><br>
+
+                <div class="totalwater">
+                    <div class="proswater">
+                        <h3 style="font-size: 40px; font-family:monospace; color: goldenrod">Causes</h3>
+                        <p>Kleptocracy is more likely to occur when:<br>
+                            -Producer groups or their political representatives are shortsighted<br>
+                            -There is more foreign aid to the ruler<br>
+                            -The economy is reliant on the trade of natural resources <br>
+                            </p>
+                    </div>
+                                
+                    <div class="proswater">
+                        <h3 style="font-size: 40px; font-family:monospace; color: goldenrod">Preventions</h3>
+                        <p>Kleptocracy can be partially prevented with these actions:<br>
+                            -Create anti-corruption safeguards: Create and maintain anti-corruption safeguards.<br>
+                           -Build an activist network: Build and expand an anti-corruption and climate activist network.<br>
+                           -Bring the issue to the forefront of policy debates: Bring the issue of kleptocracy to the forefront of new policy debates.
+                        </p>
+                    </div>
+                                
+                    <div class="proswater">
+                        <h3 style="font-size: 40px; font-family:monospace; color: goldenrod">Facts</h3>
+                        <p>Here are some facts about kleptocracy:<br>
+                            -Power resource: Kleptocracy is a system that uses coercion as its primary power resource.<br>
+                            -Power-over: Kleptocracy is a system where power-over delivers empowerment for the powerful at the expense of the compliant other.<br>
+                            -Structural bias: The kleptocratic status quo entails an extreme structural bias in favor of the powerful.<br>
+                            -Globalization: Over the last 30 years, as globalization has expanded, transnational kleptocracy networks have also become more expansive.</p>
+                    </div>      
+                </div>
+        </div>
+</section>
+
+                                        <!--Bad Infrastructure PAGE-->
+<a name = "land" class="land"><section class="fourth"></a>
+    <div class="land">
+        <h1 style="color: rgb(0, 0, 0);">Bad Infrastructure</h1><br><br><br>
+
+            <div class="totalland">
+                <div class="prosland">
+                    <h3 style="font-size: 40px; font-family:monospace; color:navy">Causes</h3>
+                    <p>Poor infrastructure can be caused by many factors, including:<br>
+                        -Lack of funding<br>
+                        -Poor planning<br>
+                        -Corruption<br>
+                        -Lack of skilled personnel<br>
+                        -Poor repair and maintenance<br>
+                        -Grant dependency<br>
+                        -Lack of by-laws<br>
+                        -Inefficiency of developmental labor</p>
+                </div>
+
+                <div class="prosland">
+                    <h3 style="font-size: 40px; font-family:monospace; color:navy">Preventions</h3>
+                    <p>
+                        Here are some ways to improve infrastructure quality:<br>
+                        -Use clear, timely, and transparent decision-making, supported by strong evidence-based planning, clear prioritization, and best practice technical design and delivery.<br>
+                        -Plan for long-term governance and management, and consider the long-term impacts, risks, and trade-offs.<br>
+                        -Maintain an asset register, backed by a condition report on each asset, to reduce maintenance costs and increase the life span and quality of the infrastructure.
+                    </p>
+                </div>
+
+                <div class="prosland">
+                    <h3 style="font-size: 40px; font-family:monospace; color:navy">Facts</h3>
+                    <p>Here are some facts about bad infrastructure:<br>
+                    -include building collapses, water main breaks, gas pipe ruptures, dam failures, steam pipe explosions, and communications infrastructure failures.<br>
+                    -Aging, erosion, and damage due to weather-driven events and varmints: can damage natural gas, electricity, and other infrastructure over time.<br>
+                    -Lack of infrastructure project sponsorship and leadership: can cause failure in a project. 
+                    </p>
+                </div>
+            
+            </div>
+    </div>
+</section>
+
+<!--FOOTER-->
+<section class="footer">
+    <a name="aboutus" class="aboutus"></a>
+        <h4>About Us</h4>
+    </section>
+</section>    
+</html> 

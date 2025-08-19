@@ -2,7 +2,7 @@ from flask import Flask, send_from_directory
 
 app = Flask(__name__)
 
-# Serve HTML files directly
+# Serve HTML files
 @app.route('/home.html')
 def home():
     return send_from_directory('.', 'home.html')
@@ -24,7 +24,12 @@ def donate():
 def style():
     return send_from_directory('.', 'style.css')
 
-# Optional: redirect root to home.html
+# Serve Images folder as static
+@app.route('/Images/<path:filename>')
+def images(filename):
+    return send_from_directory('Images', filename)
+
+# Redirect root to home.html
 @app.route('/')
 def index():
     return send_from_directory('.', 'home.html')
